@@ -1,0 +1,39 @@
+* {
+    font-family: "Crimson Text", serif;
+    box-sizing: border-box;
+    font-size: large;
+  }
+  body {
+    background-color: #e0f7fa;
+  }
+  
+  .container {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px !important;
+  }
+  .projectTitle {
+    font-weight: 500;
+  }
+  .loginRow {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .loginFormBtnSignUp {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px;
+  }
+  .loginFormBtnLogin {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+  }
+  .loginTrouble {
+    display: flex;
+    justify-content: center;
+  }
+  
