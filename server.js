@@ -1,41 +1,85 @@
-const path = require('path');
+const sdv = require('sportsdataverse');
 const express = require('express');
-const session = require('express-session');
-const exphbs = require('express-handlebars');
-const routes = require('./controllers');
-const helpers = require('./utils/helpers');
+const path = require('path');
+const fs = require('fs');
+// we do not need uuid here but keeping it here in case we need it
+// const uuid = require('./helpers/uuid');
 
-const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const PORT = 3001;
 
 const app = express();
-const PORT = process.env.PORT || 3001;
-
-// Set up Handlebars.js engine with custom helpers
-const hbs = exphbs.create({ helpers });
-
-const sess = {
-  secret: 'Super secret secret',
-  cookie: {},
-  resave: false,
-  saveUninitialized: true,
-  store: new SequelizeStore({
-    db: sequelize
-  })
-};
-
-app.use(session(sess));
-
-// Inform Express.js on which template engine to use
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true })); // what is extended: true just cannot recall it
 
-app.use(routes);
+app.use(express.static('public'));
+// do not see index.html in public folder yet
+app.get('/', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+);
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+// GET request for blog entries suggest to delete userRoutes.js, projectRoutes.js
+app.get('controllers/api/', (req, res) => {
+  // Send a message to the client
+  res.status(200).json(`${req.method} request received to get blog entries`);
+
+  // Log our request to the terminal
+  console.info(`${req.method} request received to get blog entries`);
 });
+
+// POST request to add a review
+app.post('controllers/api/', (req, res) => {
+  // Log that a POST request was received
+  console.info(`${req.method} request received to add a review`);
+
+  // Destructuring assignment for the items in req.body
+  const { blogEntry, username } = req.body;
+
+  // If all the required properties are present
+  if (blogEntry && username) {
+    // Variable for the object we will save
+    const newBlogEntry = {
+ //     product,
+      blogEntry,
+      username,
+ //     review_id: uuid(),
+    };
+
+    // to create file blogEntries.js
+    fs.readFile('./db/blogEntries.json', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+      } else {
+        // Convert string into JSON object
+        const parsedBlogEntries = JSON.parse(data);
+
+        // Add a new blog entry
+        parsedBlogEntries.push(newBlogEntry);
+
+        // Write updated blog entries back to the file
+        fs.appendFile(
+          './db/blogEntries.json',
+          JSON.stringify(parsedBlogEntries, null, 4),
+          (writeErr) =>
+            writeErr
+              ? console.error(writeErr)
+              : console.info('Successfully updated blog!')
+        );
+      }
+    });
+
+    const response = {
+      status: 'success',
+      body: newBlogEntry,
+    };
+
+    console.log(response);
+    res.status(201).json(response);
+  } else {
+    res.status(500).json('Error in posting your entry');
+  }
+});
+
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT} 🚀`)
+);
