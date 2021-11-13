@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true })); // what is extended: true just 
 app.use(express.static('public'));
 // do not see index.html in public folder yet
 app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
+  res.sendFile(path.join(__dirname, '/views/layouts/main.handlebars'))
 );
 
 // GET request for blog entries suggest to delete userRoutes.js, projectRoutes.js
@@ -33,15 +33,15 @@ app.post('controllers/api/', (req, res) => {
   console.info(`${req.method} request received to add a blog entry`);
 
   // Destructuring assignment for the items in req.body
-  const { blogEntry, username } = req.body;
+  const { blogEntry, articleName } = req.body;
 
   // If all the required properties are present
-  if (blogEntry && username) {
+  if (blogEntry && articleName) {
     // Variable for the object we will save
     const newBlogEntry = {
  //     product,
       blogEntry,
-      username,
+      articleName,
  //     review_id: uuid(),
     };
 
