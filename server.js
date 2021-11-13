@@ -30,7 +30,7 @@ app.get('controllers/api/', (req, res) => {
 // POST request to add a review
 app.post('controllers/api/', (req, res) => {
   // Log that a POST request was received
-  console.info(`${req.method} request received to add a review`);
+  console.info(`${req.method} request received to add a blog entry`);
 
   // Destructuring assignment for the items in req.body
   const { blogEntry, username } = req.body;
@@ -46,7 +46,7 @@ app.post('controllers/api/', (req, res) => {
     };
 
     // to create file blogEntries.js
-    fs.readFile('./db/blogEntries.json', 'utf8', (err, data) => {
+    fs.readFile('./seeds/blogEntries.json', 'utf8', (err, data) => {
       if (err) {
         console.error(err);
       } else {
@@ -58,7 +58,7 @@ app.post('controllers/api/', (req, res) => {
 
         // Write updated blog entries back to the file
         fs.appendFile(
-          './db/blogEntries.json',
+          './seeds/blogEntries.json',
           JSON.stringify(parsedBlogEntries, null, 4),
           (writeErr) =>
             writeErr
