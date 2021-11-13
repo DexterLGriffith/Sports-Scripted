@@ -1,24 +1,58 @@
-<!-- Loop over each object in the projects array -->
-{{#each projects as |project| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      needed!
-    </p>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{project.description}}
-    </p>
-  </div>
-</div>
-{{/each}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Scripted</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">NFL</a></li>
+        <li><a href="#!">NBA</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">NHL</a></li>
+      </ul>
+      <nav>
+        <div class="nav-wrapper" style="background-color: #80deea !important;">
+          <a href="#!" class="brand-logo">Sports Scripted</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="">My Entries</a></li>
+            <li><a href="">New Entry</a></li>
+            <!-- Dropdown Trigger -->
+            <!-- fix this after JS is put in place.. so drop down works properly. -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a href="">Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+</head>
+<body>
+    <!-- add time and date to post stamps?  -->
+    <h1 class="mainWelcomeMessage">
+        <span>Welcome Back To the Greatest BlogSpot Application ever created! Whats on your mind?</span>
+    </h1>
+    <div class="MainBlogContainer">
+        <div class="row">
+            <div class="col s12 m6">
+              <div class="card large cyan darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Card Title</span>
+                  <!-- fix this to make blog card post right... and placeholder is the size of the card.  -->
+                  <input type="text" class="form-control" id="email-input" style="background-color: white" placeholder="whats on your mind?">
+                </div>
+                <div class="card-action">
+                  <a href="#" style="color: white !important;">Save Draft</a>
+                  <a href="#" style="color: white !important;">POST IT</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+</body>
+</html>

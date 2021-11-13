@@ -1,24 +1,39 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
-}
-
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
-}
-
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
-}
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
-}
+* {
+    font-family: "Crimson Text", serif;
+    box-sizing: border-box;
+    font-size: large;
+  }
+  body {
+    background-color: #e0f7fa;
+  }
+  
+  .container {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px !important;
+  }
+  .projectTitle {
+    font-weight: 500;
+  }
+  .loginRow {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .loginFormBtnSignUp {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px;
+  }
+  .loginFormBtnLogin {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+  }
+  .loginTrouble {
+    display: flex;
+    justify-content: center;
+  }
+  
