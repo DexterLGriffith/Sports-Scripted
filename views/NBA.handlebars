@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Scripted</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">NFL</a></li>
+        <li><a href="#!">NBA</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">NHL</a></li>
+    </ul>
+    {{#if logged_in}}
+    <nav>
+        <div class="nav-wrapper" style="background-color: #80deea !important;">
+            <a href="#!" class="brand-logo">Sports Scripted</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="">My Entries</a></li>
+                <li><a href="">New Entry</a></li>
+                <!-- Dropdown Trigger -->
+                <!-- fix this after JS is put in place.. so drop down works properly. -->
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    {{/if}}
+</head>
+
+<body>
+    <div class="containerBasketball">
+        <h1 class="atlanticTitle" style="font-weight: bold;">Atlantic</h1>
+        <div class="rowBasketball">
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Boston
+                            Celtics<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Celtics Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Brooklyn
+                            Nets<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Nets Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">New York
+                            Knicks<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Knicks Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4"
+                            style="font-weight: bolder;">Philadelphia 76ers<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">76ers Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Toronto
+                            Raptors<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Raptors Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="centralTitle" style="font-weight: bold;">Central</h1>
+        <div class="rowBasketball">
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Chicago
+                            Bulls<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Bulls Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4"
+                            style="font-weight: bolder;">Cleveland Cavaliers<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Cavaliers Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Detroit
+                            Pistons<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Pistons Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Indiana
+                            Pacers<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Pacers Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4"
+                            style="font-weight: bolder;">Milwaukee Bucks<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Bucks Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="southeastTitle" style="font-weight: bold;">Southeast</h1>
+        <div class="rowBasketball">
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Atlanta
+                            Hawks<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Hawks Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4"
+                            style="font-weight: bolder;">Charlotte Hornets<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Hornets Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Miami
+                            Heat<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Heat Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Orlando
+                            Magic<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Magic Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4"
+                            style="font-weight: bolder;">Washington Wizards<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Wizards Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="northwestTitle" style="font-weight: bold;">Northwest</h1>
+        <div class="rowBasketball">
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Denver
+                            Nuggets<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Nuggets Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4"
+                            style="font-weight: bolder;">Minnesota Timberwolves<i
+                                class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Timberwolves Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Oklahoma
+                            City Thunder<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Thunder Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Portland
+                            Trail Blazers<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Trail Blazers Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Utah
+                            Jazz<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Jazz Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="pacificTitle" style="font-weight: bold;">Pacific</h1>
+        <div class="rowBasketball">
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Golden
+                            State Warriors<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Warriors Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">LA
+                            Clippers<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Clippers Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Los
+                            Angeles Lakers<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Lakers Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Phoenix
+                            Suns<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Suns Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4"
+                            style="font-weight: bolder;">Sacramento Kings<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Kings Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="southwestTitle" style="font-weight: bold;">Southwest</h1>
+        <div class="rowBasketball">
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Dallas
+                            Mavericks<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Mavericks Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Houston
+                            Rockets<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Rockets Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">Memphis
+                            Grizzlies<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Grizzlies Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">New
+                            Orleans Pelicans<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Pelicans Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m3">
+                <div class="card z-depth-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-weight: bolder;">San
+                            Antonio Spurs<i class="material-icons right"></i></span>
+                    </div>
+                    <div class="card-action" style="color: black;">
+                        <a href="#" style="color: black;">Stats</a>
+                        <a href="#" style="color: black;">Schedule</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Spurs Information<i
+                                class="material-icons right">x</i></span>
+                        <p>Established in: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+<footer>
+    <h6 class="footerGroup" style="display: flex; justify-content:center;">Made by Team WaterBoy</h6>
+</footer>
+
+</html>
