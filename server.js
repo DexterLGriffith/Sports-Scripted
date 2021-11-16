@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const sdv = require('sportsdataverse');
 const express = require('express');
 const path = require('path');
@@ -21,7 +19,7 @@ app.get('/', (req, res) =>
 );
 
 // GET request for blog entries suggest to delete userRoutes.js, projectRoutes.js
-app.get('controllers/api/', (req, res) => {
+app.get('/controllers/api/', (req, res) => {
   // Send a message to the client
   res.status(200).json(`${req.method} request received to get blog entries`);
 
@@ -30,7 +28,7 @@ app.get('controllers/api/', (req, res) => {
 });
 
 // POST request to add a review
-app.post('controllers/api/', (req, res) => {
+app.post('/controllers/api/', (req, res) => {
   // Log that a POST request was received
   console.info(`${req.method} request received to add a blog entry`);
 
@@ -82,7 +80,59 @@ app.post('controllers/api/', (req, res) => {
   }
 });
 
+// POST request to save a draft
+app.post('/drafts/api/', (req, res) => {
+  // Log that a POST request was received
+  console.info(`${req.method} request received to save a draft`);
+
+  // Destructuring assignment for the items in req.body
+  const { draftEntry, draftName } = req.body;
+
+  // If all the required properties are present
+  if (draftEntry && draftName) {
+    // Variable for the object we will save
+    const newDraft = {
+ //     product,
+    draftEntry, 
+    draftName,
+ //     review_id: uuid(),
+    };
+
+    // to create file blogEntries.js
+    fs.readFile('./seeds/draftEntries.json', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+      } else {
+        // Convert string into JSON object
+        const parsedDraftEntries = JSON.parse(data);
+
+        // Add a new blog entry
+        parsedDraftEntries.push(newDraft);
+
+        // Write updated blog entries back to the file
+        fs.appendFile(
+          './seeds/draftEntries.json',
+          JSON.stringify(parsedDraftEntries, null, 4),
+          (writeErr) =>
+            writeErr
+              ? console.error(writeErr)
+              : console.info('Successfully updated draft!')
+        );
+      }
+    });
+
+    const response = {
+      status: 'success',
+      body: newDraft,
+    };
+
+    console.log(response);
+    res.status(201).json(response);
+  } else {
+    res.status(500).json('Error in saving your draft');
+  }
+});
+
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
->>>>>>> 46ead9ad8eb1a8c01df866876c9977bbab1e7bdb
