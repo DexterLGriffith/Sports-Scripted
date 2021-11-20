@@ -8,3 +8,4 @@ And we can add new data to JSON file. When I click send button on Insomnia
 the data is added to JSON file:
 ![image](https://user-images.githubusercontent.com/88174852/142713099-3b74a61a-8fd3-4f55-b1bd-9f062fadcc50.png)
 We used new technology called Canva to create an animated gif
+![image](https://user-images.githubusercontent.com/88174852/142715520-d077b2bb-ff80-469f-aefa-d13c08da7068.png)
