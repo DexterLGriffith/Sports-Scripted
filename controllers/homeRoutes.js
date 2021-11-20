@@ -10,17 +10,17 @@ router.get('/signup', async (req, res) => {
 });
 
 
-router.get('/homepage', withAuth, async (req, res) => {
+router.get('/homepage',  withAuth, async (req, res) => {
 
     res.render('homepage');
 });
 
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/profile',  withAuth, async (req, res) => {
 
     res.render('profile');
 });
 
-router.get('/homepage/NFL', withAuth, async (req, res) => {
+router.get('/homepage/NFL',  withAuth, async (req, res) => {
 
     res.render('NFL');
 })
