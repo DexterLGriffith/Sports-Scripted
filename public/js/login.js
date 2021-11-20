@@ -5,7 +5,7 @@ const passwordInputEl = document.getElementById("password-input");
 
 async function postData(data) {
     // Default options are marked with *
-    const response = await fetch('/', {
+    const response = await fetch('/api/users/login', {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         headers: {
             'Content-Type': 'application/json'
