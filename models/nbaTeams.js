@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const sequelize = require ('../seeds/utils/nbaTeamdata');
+const data = require ('../seeds/utils/nbaTeamdata');
 class NBATeams extends Model {}
 NBATeams.init(
   {
