@@ -1,41 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Scripted</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
-    <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">NFL</a></li>
-        <li><a href="#!">NBA</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">NHL</a></li>
-    </ul>
-    {{#if logged_in}}
-    <nav>
-        <div class="nav-wrapper" style="background-color: #80deea !important;">
-            <a href="#!" class="brand-logo">Sports Scripted</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="">My Entries</a></li>
-                <li><a href="">New Entry</a></li>
-                <!-- Dropdown Trigger -->
-                <!-- fix this after JS is put in place.. so drop down works properly. -->
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i
-                            class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a href="">Logout</a></li>
-            </ul>
-        </div>
-    </nav>
-    {{/if}}
-</head>
-
-<body>
     <div class="containerBasketball">
         <h1 class="atlanticTitle" style="font-weight: bold;">Atlantic</h1>
         <div class="rowBasketball">
@@ -629,18 +591,3 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-<footer>
-    <h6 class="footerGroup" style="display: flex; justify-content:center;">Made by Team WaterBoy</h6>
-</footer>
-
-</html>

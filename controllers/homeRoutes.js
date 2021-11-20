@@ -20,4 +20,13 @@ router.get('/profile', withAuth, async (req, res) => {
     res.render('profile');
 });
 
+router.get('/homepage/NFL', withAuth, async (req, res) => {
+
+    res.render('NFL');
+})
+
+router.get('/homepage/NBA', withAuth, async (req, res) => {
+
+    res.render('NBA');
+})
 module.exports = router; 
