@@ -10,7 +10,7 @@ router.get('/signup', async (req, res) => {
 });
 
 
-router.get('/homepage', async (req, res) => {
+router.get('/homepage', withAuth, async (req, res) => {
 
     res.render('homepage');
 });
