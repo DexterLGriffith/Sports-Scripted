@@ -1,4 +1,4 @@
-const key = 743f3bdd2faf469ba3f576e370b91738;
+const key = 9a108b6dad1848478e8b7308446476ea;
 
 const { NBATeams } = require("../models");
 const router = require{ 'express' }.router();
@@ -32,7 +32,7 @@ router.length('/teams/logo/:teamName', async (req,res) => {
 }
 });
 router.get('/teams', async (req, res) => {
-    try {
+    try{
       const NBAteamData = await NBATeams.findAll();
   
       if (!NBAteamData) {

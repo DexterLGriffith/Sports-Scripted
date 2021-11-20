@@ -1,0 +1,59 @@
+* {
+  font-family: "Crimson Text", serif;
+  box-sizing: border-box;
+  font-size: large;
+}
+body {
+  background-color: #e0f7fa;
+
+}
+
+.container {
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px !important;
+}
+.projectTitle {
+  font-weight: 500;
+}
+.loginRow {
+  display: flex;
+  justify-content: space-evenly;
+}
+.loginFormBtnSignUp {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 10px;
+}
+.loginFormBtnLogin {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 5px;
+}
+.loginTrouble {
+  display: flex;
+  justify-content: center;
+}
+.card {
+    border-radius: 15px !important;
+    border: 2px solid #00acc1;
+    padding: 20px;
+    width: auto;
+    height: auto;
+}
+.rowNfcFootball {
+  display: flex;
+  flex-wrap: wrap;
+}
+.rowAfcFootball {
+  display: flex;
+  flex-wrap: wrap;
+}
+.rowBasketball {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

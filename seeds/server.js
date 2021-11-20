@@ -23,9 +23,6 @@ app.use(express.urlencoded({ extended: true })); // what is extended: true just 
 
 app.use(express.static('public'));
 app.use(routes);
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/nba.handlebars"));
-});
 
 
 app.listen(PORT, () =>
