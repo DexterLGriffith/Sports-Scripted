@@ -10,22 +10,22 @@ router.get('/signup', async (req, res) => {
 });
 
 
-router.get('/homepage', async (req, res) => {
+router.get('/homepage',  withAuth, async (req, res) => {
 
     res.render('homepage');
 });
 
-router.get('/profile', async (req, res) => {
+router.get('/profile',  withAuth, async (req, res) => {
 
     res.render('profile');
 });
 
-router.get('/homepage/NFL', async (req, res) => {
+router.get('/homepage/NFL',  withAuth, async (req, res) => {
 
     res.render('NFL');
 })
 
-router.get('/homepage/NBA', async (req, res) => {
+router.get('/homepage/NBA', withAuth, async (req, res) => {
 
     res.render('NBA');
 })
