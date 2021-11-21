@@ -19,3 +19,7 @@ We used new technology called Canva to create an animated gif
 
 ![Getting Started](public/readme_images/142715520-d077b2bb-ff80-469f-aefa-d13c08da7068.png)
 
+Here is link to deployed Heroku app: https://sports-scripted.herokuapp.com/
+
+And here is link to GitHub repo: https://github.com/DexterLGriffith/Sports-Scripted
+
