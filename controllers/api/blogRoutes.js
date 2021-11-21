@@ -1,3 +1,4 @@
+const fs = require('fs');
 const router = require('express').Router();
 // /api/blog
 router.get('/', (req, res) => {
@@ -27,28 +28,28 @@ router.post('/', (req, res) => {
    //     review_id: uuid(),
       };
   
-      // to create file blogEntries.js
-      // fs.readFile('./seeds/blogEntries.json', 'utf8', (err, data) => {
-      //   if (err) {
-      //     console.error(err);
-      //   } else {
-      //     // Convert string into JSON object
-      //     const parsedBlogEntries = JSON.parse(data);
+     // to create file blogEntries.js
+      fs.readFile('./seeds/blogEntries.json', 'utf8', (err, data) => {
+        if (err) {
+          console.error(err);
+        } else {
+          // Convert string into JSON object
+          const parsedBlogEntries = JSON.parse(data);
   
-      //     // Add a new blog entry
-      //     parsedBlogEntries.push(newBlogEntry);
+          // Add a new blog entry
+          parsedBlogEntries.push(newBlogEntry);
   
-      //     // Write updated blog entries back to the file
-      //     fs.appendFile(
-      //       './seeds/blogEntries.json',
-      //       JSON.stringify(parsedBlogEntries, null, 4),
-      //       (writeErr) =>
-      //         writeErr
-      //           ? console.error(writeErr)
-      //           : console.info('Successfully updated blog!')
-      //     );
-      //   }
-      // });
+          // Write updated blog entries back to the file
+          fs.writeFile(
+            './seeds/blogEntries.json',
+            JSON.stringify(parsedBlogEntries, null, 4),
+            (writeErr) =>
+              writeErr
+                ? console.error(writeErr)
+                : console.info('Successfully updated blog!')
+          );
+        }
+      });
   
       const response = {
         status: 'success',
@@ -80,27 +81,27 @@ router.post('/', (req, res) => {
       };
   
       // to create file blogEntries.js
-      // fs.readFile('./seeds/draftEntries.json', 'utf8', (err, data) => {
-      //   if (err) {
-      //     console.error(err);
-      //   } else {
-      //     // Convert string into JSON object
-      //     const parsedDraftEntries = JSON.parse(data);
+      fs.readFile('./seeds/draftEntries.json', 'utf8', (err, data) => {
+        if (err) {
+          console.error(err);
+        } else {
+          // Convert string into JSON object
+          const parsedDraftEntries = JSON.parse(data);
   
-      //     // Add a new blog entry
-      //     parsedDraftEntries.push(newDraft);
+          // Add a new blog entry
+          parsedDraftEntries.push(newDraft);
   
-      //     // Write updated blog entries back to the file
-      //     fs.appendFile(
-      //       './seeds/draftEntries.json',
-      //       JSON.stringify(parsedDraftEntries, null, 4),
-      //       (writeErr) =>
-      //         writeErr
-      //           ? console.error(writeErr)
-      //           : console.info('Successfully updated draft!')
-      //     );
-      //   }
-      // });
+          // Write updated blog entries back to the file
+          fs.writeFile(
+            './seeds/draftEntries.json',
+            JSON.stringify(parsedDraftEntries, null, 4),
+            (writeErr) =>
+              writeErr
+                ? console.error(writeErr)
+                : console.info('Successfully updated draft!')
+          );
+        }
+      });
   
       const response = {
         status: 'success',

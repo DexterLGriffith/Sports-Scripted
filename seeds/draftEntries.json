@@ -1,10 +1,18 @@
 [
-  {
-    "draftEntry": "Draft Test",
-    "draftName": "Testing Draft"
-  },
-  {
-    "draftEntry": "Second Draft Test",
-    "draftName": "Testing Second Draft"
-  }
+    {
+        "draftEntry": "Draft Test",
+        "draftName": "Testing Draft"
+    },
+    {
+        "draftEntry": "Second Draft Test",
+        "draftName": "Testing Second Draft"
+    },
+    {
+        "draftEntry": "lost to Minnesota last night",
+        "draftName": "draft1"
+    },
+    {
+        "draftEntry": "going to play agains St Louis tomorrow",
+        "draftName": "draft2"
+    }
 ]
