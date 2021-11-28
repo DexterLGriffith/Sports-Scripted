@@ -33,22 +33,25 @@ We used new technology called Canva to create an animated gif
 ## Links 
 
 [Link to the Code Repository](https://github.com/DexterLGriffith/Sports-Scripted)
+
 [Link to the deployed Heroku app](https://sports-scripted.herokuapp.com/)
 
 ## Credits 
 
 Dexter Griffith
+
 Alexander Umnov
+
 Brandon Perez
+
 Josh Hogan
 
-Here is link to deployed Heroku app: https://sports-scripted.herokuapp.com/
-
-And here is link to GitHub repo: https://github.com/DexterLGriffith/Sports-Scripted
 
 ## Libraries and frameworks 
 
--[CSS Library: Materialize](https://materializecss.com/)
--[Logo Design: Canva](https://www.canva.com/)
--[Google Fonts - Crimson Text](https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap)
--
+[CSS Library: Materialize](https://materializecss.com/)
+
+[Logo Design: Canva](https://www.canva.com/)
+
+[Google Fonts - Crimson Text](https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap)
+
