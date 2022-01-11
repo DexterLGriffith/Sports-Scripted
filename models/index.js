@@ -1,3 +1,5 @@
 const User = require('./User');
+const NBATeams = require('./nbaTeams')
 
-module.exports = { User };
+
+module.exports = { NBATeams, User };
