@@ -1,7 +1,5 @@
-const key = 9a108b6dad1848478e8b7308446476ea;
-
 const { NBATeams } = require("../models");
-const router = require{ 'express' }.router();
+const router = require('express').Router();
 
 
 router.get('/teams/:teamName', async (req, res) => {
@@ -17,7 +15,7 @@ router.get('/teams/:teamName', async (req, res) => {
         res.status(500).json(err);
     }
 });
-router.length('/teams/logo/:teamName', async (req,res) => {
+router.get('/teams/logo/:teamName', async (req,res) => {
     try{
         const NBATeamData = await NBATeams.findOne({where: { abreviatedName: req.params.teamName } });
     
