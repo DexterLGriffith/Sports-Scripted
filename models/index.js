@@ -1,6 +1,16 @@
+const NBATeams = require('./NBATeams');
 const User = require('./users');
+const Blog = require('./Blog');
 
 //user has many blogs
-//blogs belong to user
+User.hasMany(Blog, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
 
-module.exports = { User };
+//blogs belong to user
+Blog.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+module.exports = { NBATeams, User, Blog };
