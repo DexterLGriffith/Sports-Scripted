@@ -1,3 +1,4 @@
+const NBATeams = require('./NBATeams');
 const User = require('./users');
 const Blog = require('./Blog');
 
@@ -12,4 +13,4 @@ Blog.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Blog };
+module.exports = { NBATeams, User, Blog };
